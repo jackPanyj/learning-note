@@ -3,9 +3,6 @@ import React, {Component, PropTypes} from 'react'
 export default class AddTodo extends Component {
   constructor (props) {
     super(props)
-    this.propTypes = {
-      onAddClick: PropTypes.func.isRequired
-    }
   }
   render () {
     return (
@@ -21,4 +18,8 @@ export default class AddTodo extends Component {
     this.props.onAddClick(text)
     node.value = ''
   }
+}
+
+AddTodo.propTypes = {
+  onAddClick: PropTypes.func.isRequired
 }

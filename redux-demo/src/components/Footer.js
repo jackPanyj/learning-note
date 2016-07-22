@@ -3,14 +3,6 @@ import React, {Component, PropTypes} from 'react'
 export default class Footer extends Component {
   constructor(props) {
       super(props)
-      this.propTypes = {
-        onFilterChange: PropTypes.func.isRequired,
-        filter: PropTypes.oneOf([
-          'SHOW_ALL',
-          'SHOW_ACTIVE',
-          'SHOW_COMPLETED'
-        ]).isRequired
-      }
   }
   renderFilter (filter, name) {
     if (filter === this.props.filter) return name
@@ -34,4 +26,13 @@ export default class Footer extends Component {
       </p>
     )
   }
+}
+
+Footer.propTypes = {
+  onFilterChange: PropTypes.func.isRequired,
+  filter: PropTypes.oneOf([
+    'SHOW_ALL',
+    'SHOW_ACTIVE',
+    'SHOW_COMPLETED'
+  ]).isRequired
 }

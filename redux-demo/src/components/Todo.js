@@ -3,11 +3,6 @@ import React, {Component, PropTypes} from 'react'
 export default class Todo extends Component {
   constructor(props) {
     super(props)
-    this.propTypes = {
-      text: PropTypes.string.isRequired,
-      onClick: PropTypes.func.isRequired,
-      completed: PropTypes.bool.isRequired
-    }
   }
   render () {
     return (
@@ -19,4 +14,10 @@ export default class Todo extends Component {
       </li>
     )
   }
+}
+
+Todo.propTypes = {
+  text: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+  completed: PropTypes.bool.isRequired
 }
